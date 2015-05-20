@@ -1,0 +1,26 @@
+{
+  "name": "puresec-detect-infrared",
+  "version": "0.0.1",
+  "description": "puresec infrared detector",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fhopeman/puresec-detect-infrared.git"
+  },
+  "author": "Fabian Hoffmann",
+  "bugs": {
+    "url": "https://github.com/fhopeman/puresec-detect-infrared/issues"
+  },
+  "homepage": "https://github.com/fhopeman/puresec-detect-infrared#readme",
+  "dependencies": {
+    "express": "^4.12.4",
+    "winston": "^1.0.0",
+    "puresec-microservice-js": "git://github.com/fhopeman/puresec-microservice-js.git#0.3.0",
+    "grunt": "~0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "~0.11.1",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.2.4",
+    "sinon": "^1.14.1"
+  }
+}
