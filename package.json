@@ -2,7 +2,6 @@
   "name": "puresec-detect-infrared",
   "version": "0.0.1",
   "description": "puresec infrared detector",
-  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fhopeman/puresec-detect-infrared.git"
