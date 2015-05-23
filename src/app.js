@@ -1,12 +1,14 @@
-var express = require('express');
-var logger = require('winston');
+var express = require("express");
+var logger = require("winston");
 var puresecMicroservice = require("puresec-microservice-js");
+var irDetector = require("./irDetector");
 
 // read application properties
 var urlMaster = process.env.MASTER_URL || process.argv[2] || "http://localhost:3000";
-var port = process.env.PORT || process.argv[3] || 3003;
-var name = process.env.NAME || process.argv[4] || "IR Detector";
-var description = process.env.DESCRIPTION || process.argv[5] || "";
+var name = process.env.NAME || process.argv[3] || "IR Detector";
+var description = process.env.DESCRIPTION || process.argv[4] || "";
+var pin = process.env.PIN || process.argv[5] || 7;
+var port = process.env.PORT || process.argv[6] || 3003;
 
 // services
 var app = express();
@@ -23,10 +25,10 @@ app.listen(port, function () {
         name: name,
         description: description,
         type: "detector",
-        address: utils.currentAddress() + ":" + port,
+        address: utils.currentAddress(port),
         onSuccess: function(jsonBody) {
             logger.info("registration successful", jsonBody);
-            // startObservation(jsonBody.id);
+            irDetector.start(master, jsonBody.id, pin);
         },
         onError: function(error) {
             logger.error("registration failed, exiting now", error);
