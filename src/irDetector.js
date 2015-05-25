@@ -7,11 +7,11 @@ var _checkPinValue = function(master, registrationId) {
     return function(error, value) {
         if (!error) {
             if (_currentValue !== value) {
-                logger.debug("Current value changed to", value);
+                logger.debug("pin value changed to", value);
                 _currentValue = value;
                 // send notification if value changed to true
                 if (value === true) {
-                    logger.info("send notification to master");
+                    logger.info("alarm detected: Send notification to master");
                     master.notify({
                         registrationId: registrationId
                     });
