@@ -3,6 +3,9 @@ var logger = require("winston");
 var puresecMicroservice = require("puresec-microservice-js");
 var irDetector = require("./irDetector");
 
+// settings
+logger.level = "debug";
+
 // read application properties
 var urlMaster = process.env.MASTER_URL || process.argv[2] || "http://localhost:3000";
 var name = process.env.NAME || process.argv[3] || "IR Detector";
