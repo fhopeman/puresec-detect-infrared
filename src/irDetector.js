@@ -15,6 +15,7 @@ var _onIrChange = function(master, registrationId) {
 
 var start = function(master, registrationId, pin) {
     logger.debug("start listening at pin " + pin);
+    gpio.setPollFrequency(1000);
     gpio.on("change", _onIrChange(master, registrationId));
     gpio.setup(pin, gpio.DIR_IN);
 };

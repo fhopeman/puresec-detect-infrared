@@ -12,4 +12,4 @@ First of all you need a raspberry pi with installed [linux distribution](https:/
 2. run `./bin/setupServer.sh` to install npm, node and other dependencies
 3. try to run `grunt`. If all tests passing, you are ready to start
 4. run the following command to start the microservice:
-   `node ./src/app.js`
+   `MASTER_URL="http://url/to/master:port" node src/app.js`
