@@ -5,6 +5,7 @@ var _onIrChange = function(master, registrationId) {
     return function(pin, value) {
         logger.debug("PIN " + pin + " is now " + value);
         if (value === 1) {
+            logger.info("send notification to master");
             master.notify({
                 registrationId: registrationId
             });
