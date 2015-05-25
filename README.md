@@ -18,6 +18,7 @@ First of all you need a raspberry pi with installed [linux distribution](https:/
    `node src/app.js`
 
    Following options are configurable via env properties:
+
 | Property    | Default                 |
 |-------------|-------------------------|
 | MASTER_URL  | http://localhost:3000   |
