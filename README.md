@@ -18,12 +18,13 @@ First of all you need a raspberry pi with installed [linux distribution](https:/
    `node src/app.js`
 
    Following options are configurable via env properties:
-   | Property    | Default                 |
-   | MASTER_URL  | http://localhost:3000   |
-   | NAME        | IR Detector             |
-   | DESCRIPTION |                         |
-   | PORT        | 3003                    |
-   | PIN         | 7                       |
+| Property    | Default                 |
+|-------------|-------------------------|
+| MASTER_URL  | http://localhost:3000   |
+| NAME        | IR Detector             |
+| DESCRIPTION |                         |
+| PORT        | 3003                    |
+| PIN         | 7                       |
 
    The start command with properties:
    `MASTER_URL="http://url/to/master:port" [some other properties] node src/app.js`
