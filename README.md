@@ -15,6 +15,7 @@ First of all you need a raspberry pi with installed [linux distribution](https:/
    5V pins, the GND to one of the GND pins and the out (data) pin to GPIO4/PIN7. Later on you can
    configure the pin of your choice.
 5. run the following command to start the microservice:
+
    `node src/app.js`
 
    Following options are configurable via env properties:
@@ -28,4 +29,5 @@ First of all you need a raspberry pi with installed [linux distribution](https:/
 | PIN         | 7                       |
 
    The start command with properties:
+   
    `MASTER_URL="http://url/to/master:port" [some other properties] node src/app.js`
