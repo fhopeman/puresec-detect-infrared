@@ -22,13 +22,13 @@ Now you are ready to start the service with the following command:
 
 Following options are configurable via env properties:
 
-| Property    | Default                 | Description |
+|Property    | Default                 | Description |
 |-------------|-------------------------|-------------|
-| MASTER_URL  | http://localhost:3000   |URL of the master|
-| NAME        | IR Detector             |name of the service|
-| DESCRIPTION |                         |description of the service|
-| PORT        | 3003                    |port of the service|
-| PIN         | 7                       |pin of the data lane|
+|MASTER_URL  | http://localhost:3000   |URL of the master|
+|NAME        | IR Detector             |name of the service|
+|DESCRIPTION |                         |description of the service|
+|PORT        | 3003                    |port of the service|
+|PIN         | 7                       |pin of the data lane|
 
 The start command with an example property:
    
