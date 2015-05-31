@@ -8,26 +8,28 @@ send a mail).
 First of all you need a raspberry pi with installed [linux distribution](https://www.raspberrypi.org/downloads/).
 
 ## Usage
-1. clone repository to your rasbperry pi and change directory to the created folder
-2. run `./bin/setupServer.sh` to install npm, node and other dependencies
-3. try to run `grunt`. If all tests passing, you are ready to start
-4. now it's time to wire the IR-sensor. I'm using the HC-SR501. The VCC is connected to one of the
-   5V pins, the GND to one of the GND pins and the out (data) pin to GPIO4/PIN7. Later on you can
-   configure the pin of your choice.
-5. run the following command to start the microservice:
+Firstly, clone repository to your rasbperry pi and change directory to the created folder.
+
+Then you can run the `./bin/setupServer.sh` script to install npm, node and other dependencies which the microservice needs to run properly. After the script is finished, try to run `grunt`. If all tests passing, you are ready to start with the wiring of the IR-sensor. I'm using the HC-SR501. The VCC is connected to one of the
+5V pins, the GND to one of the GND pins and the out (data) pin to GPIO4/PIN7. Later on you can
+configure a data pin of your choice.
+
+Now you are ready to start the service with the following command:
 
    `node src/app.js`
 
-   Following options are configurable via env properties:
+## Options
 
-| Property    | Default                 |
-|-------------|-------------------------|
-| MASTER_URL  | http://localhost:3000   |
-| NAME        | IR Detector             |
-| DESCRIPTION |                         |
-| PORT        | 3003                    |
-| PIN         | 7                       |
+Following options are configurable via env properties:
 
-   The start command with properties:
+| Property    | Default                 | Description |
+|-------------|-------------------------|-------------|
+| MASTER_URL  | http://localhost:3000   ||
+| NAME        | IR Detector             ||
+| DESCRIPTION |                         ||
+| PORT        | 3003                    ||
+| PIN         | 7                       ||
+
+The start command with an example property:
    
    `MASTER_URL="http://url/to/master:port" [some other properties] node src/app.js`
