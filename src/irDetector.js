@@ -32,7 +32,7 @@ var start = function(master, registrationId, pin) {
     // callback would never be called and no pin changes would be detected ..
     setInterval(function() {
         gpio.read(pin, _checkPinValue(master, registrationId));
-    }, 3000);
+    }, 2000);
 };
 
 module.exports =  {

@@ -37,7 +37,7 @@ describe("irDetector", function() {
 
         // when
         testee.start({}, 7, 9);
-        this.clock.tick(3001);
+        this.clock.tick(2001);
 
         // then
         assert(gpioReadStub.withArgs(9, sinon.match.func).calledOnce);
@@ -55,7 +55,7 @@ describe("irDetector", function() {
 
         // when
         testee.start(master, 7, 9);
-        this.clock.tick(3001);
+        this.clock.tick(2001);
 
         // then
         assert(masterSpy.withArgs({registrationId: 7}).calledOnce);
@@ -72,7 +72,7 @@ describe("irDetector", function() {
 
         // when
         testee.start(master, 7, 11);
-        this.clock.tick(3001);
+        this.clock.tick(2001);
 
         // then
         assert(masterSpy.withArgs({registrationId: 7}).notCalled);
@@ -89,8 +89,8 @@ describe("irDetector", function() {
 
         // when
         testee.start(master, 7, 11);
-        this.clock.tick(3001);
-        this.clock.tick(3001);
+        this.clock.tick(2001);
+        this.clock.tick(2001);
 
         // then
         assert(masterSpy.withArgs({registrationId: 7}).calledOnce);
@@ -107,7 +107,7 @@ describe("irDetector", function() {
 
         // when
         testee.start(master, 7, 11);
-        this.clock.tick(3001);
+        this.clock.tick(2001);
 
         // then
         assert(masterSpy.withArgs({registrationId: 7}).notCalled);

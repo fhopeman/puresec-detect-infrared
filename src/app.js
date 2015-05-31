@@ -4,7 +4,7 @@ var puresecMicroservice = require("puresec-microservice-js");
 var irDetector = require("./irDetector");
 
 // settings
-logger.level = "debug";
+logger.level = "info";
 
 // read application properties
 var urlMaster = process.env.MASTER_URL || process.argv[2] || "http://localhost:3000";
