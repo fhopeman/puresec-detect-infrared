@@ -24,11 +24,11 @@ Following options are configurable via env properties:
 
 | Property    | Default                 | Description |
 |-------------|-------------------------|-------------|
-| MASTER_URL  | http://localhost:3000   ||
-| NAME        | IR Detector             ||
-| DESCRIPTION |                         ||
-| PORT        | 3003                    ||
-| PIN         | 7                       ||
+| MASTER_URL  | http://localhost:3000   |URL of the master|
+| NAME        | IR Detector             |name of the service|
+| DESCRIPTION |                         |description of the service|
+| PORT        | 3003                    |port of the service|
+| PIN         | 7                       |pin of the data lane|
 
 The start command with an example property:
    
