@@ -10,26 +10,30 @@ First of all you need a raspberry pi with installed [linux distribution](https:/
 ## Usage
 Firstly, clone repository to your rasbperry pi and change directory to the created folder.
 
-Then you can run the `./bin/setupServer.sh` script to install npm, node and other dependencies which the microservice needs to run properly. After the script is finished, try to run `grunt`. If all tests passing, you are ready to start with the wiring of the IR-sensor. I'm using the HC-SR501. The VCC is connected to one of the
+Then you can run the `./bin/setupServer.sh` script to install npm, node and other dependencies which the microservice needs to run properly. After the script is finished, try to run `grunt`. If all tests passing, you are ready to start with the wiring of the IR-sensor.
+
+### Wiring
+I'm using the HC-SR501. The VCC is connected to one of the
 5V pins, the GND to one of the GND pins and the out (data) pin to GPIO4/PIN7. Later on you can
 configure a data pin of your choice.
 
+### Run the service
 Now you are ready to start the service with the following command:
 
    `node src/app.js`
 
-## Options
+### Options
 
 Following options are configurable via env properties:
 
-|Property    | Default                 | Description |
-|-------------|-------------------------|-------------|
-|MASTER_URL  | http://localhost:3000   |URL of the master|
-|NAME        | IR Detector             |name of the service|
-|DESCRIPTION |                         |description of the service|
-|PORT        | 3003                    |port of the service|
-|PIN         | 7                       |pin of the data lane|
+|Property    | Description                | Default               |
+|-------------|---------------------------|-----------------------|
+|MASTER_URL  | URL of the master          | http://localhost:3000 |
+|NAME        | Name of the service        | IR Detector           |
+|DESCRIPTION | Description of the service |                       |
+|PORT        | Port of the service        | 3003                  |
+|PIN         | Pin of the data lane       | 7                     |
 
 The start command with an example property:
-   
-   `MASTER_URL="http://url/to/master:port" [some other properties] node src/app.js`
+
+`MASTER_URL="http://url/to/master:port" [some other properties] node src/app.js`
