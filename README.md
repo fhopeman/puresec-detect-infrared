@@ -1,6 +1,6 @@
 # puresec-detect-infrared [![Build Status](https://travis-ci.org/fhopeman/puresec-detect-infrared.svg?branch=master)](https://travis-ci.org/fhopeman/puresec-detect-infrared)
 
-This microservice is supposed to be an infrared detector. All movement detections will
+This microservice is part of the [puresec ecosystem](https://github.com/fhopeman/puresec-master) and is supposed to be an infrared detector. All movement detections will
 trigger a master notification. The master can decide what to do with this message (e.g.
 send a mail).
 
